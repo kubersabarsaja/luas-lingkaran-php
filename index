@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>luas lingkaran</title>
+</head>
+<body>
+    <h1>Hitung Luas Lingkaran Dengan PHP</h1>
+    <form action="./" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Jari-Jari Lingkaran</td>
+                <td>:</td>
+                <td><input type="text" name="jari_jari" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="submit" name="submit" value="Hitung"></td>
+            </tr>
+        </table>
+    </form>
+    <?php
+        if(isset($_POST['submit'])){
+            $jari_jari    =$_POST['jari_jari'];
+            
+            // menghitung luas lingkaran
+            $luas_lingkaran = 22/7 * $jari_jari * $jari_jari;
+            
+            echo "Hasil hitung luas lingkaran adalah sebagai berikut:<br />";
+            echo "Diketahui;<br />";
+            echo "Jari-Jari Lingkaran = $jari_jari<br />";
+            echo "Maka luas lingkaran sama dengan (22/7 x $jari_jari x $jari_jari) = $luas_lingkaran";
+        }
+    ?>
+</body>
+</html>
